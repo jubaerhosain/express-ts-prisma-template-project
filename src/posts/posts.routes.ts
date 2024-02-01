@@ -6,10 +6,11 @@ import { validateDto } from "../middlewares/dto-validation.middleware";
 import { CreatePostDto } from "./dto/create-post.dto";
 
 import { prismaClient } from "../prisma/prisma.client";
+import { defaultErrorHandler } from "../middlewares/global-error-handler.middleware";
 
 const postsController = new PostsController(new PostsService(new PostsRepository(prismaClient)));
 
-export const postRoutes = Router(); 
+export const postRoutes = Router();
 
 postRoutes.post("/posts", validateDto(CreatePostDto), postsController.create.bind(postsController));
 postRoutes.put("/posts/:id", postsController.update.bind(postsController));

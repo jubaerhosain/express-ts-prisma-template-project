@@ -1,9 +1,8 @@
 import { RequestHandler } from "express";
 import { plainToInstance } from "class-transformer";
 import { validate, ValidationError } from "class-validator";
-// import HttpException from "../exception/HttpException";
 
-export function validateDto(dtoType: any, skipMissingProperties = false): RequestHandler {
+export const validateDto = (dtoType: any, skipMissingProperties = false): RequestHandler => {
     return async (req, res, next) => {
         const dtoObj = plainToInstance(dtoType, req.body);
 
@@ -29,4 +28,4 @@ export function validateDto(dtoType: any, skipMissingProperties = false): Reques
             next();
         }
     };
-}
+};

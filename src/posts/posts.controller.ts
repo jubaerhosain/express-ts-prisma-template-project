@@ -1,4 +1,5 @@
 import { CreatePostDto } from "./dto/create-post.dto";
+import PostQueryDto from "./dto/post-query.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";
 import { PostsService } from "./posts.service";
 import { Request, Response } from "express";
@@ -20,7 +21,7 @@ export class PostsController {
     }
 
     async findAll(req: Request, res: Response) {
-        throw new Error("Method not implemented.");
+        throw new Error("not implemented");
     }
 
     async findOne(req: Request, res: Response) {

@@ -1,13 +1,13 @@
-import { PrismaClient } from "@prisma/client";
+import { Post, PrismaClient } from "@prisma/client";
 import { CreatePostDto } from "./dto/create-post.dto";
 
 export class PostsRepository {
-    constructor(private prisma: PrismaClient) {}
+    constructor(private readonly prisma: PrismaClient) {}
 
-    create(postDto: CreatePostDto) {
-        // this.prisma.post.create({
-        //     data: postDto,
-        // });
-        return postDto;
+    async create(postDto: CreatePostDto): Promise<Post> {
+        const post = await this.prisma.post.create({
+            data: postDto,
+        });
+        return post;
     }
 }

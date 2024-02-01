@@ -1,3 +1,5 @@
+import { CreatePostDto } from "./dto/create-post.dto";
+import { UpdatePostDto } from "./dto/update-post.dto";
 import { PostsService } from "./posts.service";
 import { Request, Response } from "express";
 
@@ -5,11 +7,16 @@ export class PostsController {
     constructor(private readonly postsService: PostsService) {}
 
     async create(req: Request, res: Response) {
-        res.status(200).send("created");
+        const postDto: CreatePostDto = req.body;
+        const post = await this.postsService.create(postDto);
+        res.status(201).json(post);
     }
 
-    async update(req: Request, res: Response) {}
-    
+    async update(req: Request, res: Response) {
+        const { id } = req.params;
+        const updateDto: UpdatePostDto = req.body;
+    }
+
     async findAll(req: Request, res: Response) {
         throw new Error("Method not implemented.");
     }

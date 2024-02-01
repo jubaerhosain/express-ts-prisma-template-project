@@ -2,7 +2,7 @@ import { CreatePostDto } from "./dto/create-post.dto";
 import { PostQueryDto } from "./dto/post-query.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";
 import { PostsService } from "./posts.service";
-import { Request, Response, query } from "express";
+import { Request, Response } from "express";
 
 export class PostsController {
     constructor(private readonly postsService: PostsService) {}

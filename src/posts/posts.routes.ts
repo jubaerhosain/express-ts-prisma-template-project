@@ -15,6 +15,6 @@ export const postRoutes = Router();
 
 postRoutes.post("/posts", validateDto(CreatePostDto, "body"), postsController.create.bind(postsController));
 postRoutes.put("/posts/:id", validateDto(UpdatePostDto, "body"), postsController.update.bind(postsController));
-postRoutes.get("/posts/", validateDto(PostQueryDto, "query"), postsController.findAll.bind(postsController));
+postRoutes.get("/posts", validateDto(PostQueryDto, "query"), postsController.findAll.bind(postsController));
 postRoutes.get("/posts/:id", postsController.findOne.bind(postsController));
 postRoutes.delete("/posts", postsController.delete.bind(postsController));

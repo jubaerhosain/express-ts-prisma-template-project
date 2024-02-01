@@ -1,4 +1,4 @@
-import { CustomError } from "../../utils/CustomError";
+import { CustomError } from "../../utils/custom.error";
 import { CreatePostDto } from "./dto/create-post.dto";
 import { PostQueryDto } from "./dto/post-query.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";

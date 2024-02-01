@@ -15,6 +15,8 @@ export class PostsController {
     async update(req: Request, res: Response) {
         const { id } = req.params;
         const updateDto: UpdatePostDto = req.body;
+        const post = await this.postsService.update(+id, updateDto);
+        res.status(200).json(post);
     }
 
     async findAll(req: Request, res: Response) {

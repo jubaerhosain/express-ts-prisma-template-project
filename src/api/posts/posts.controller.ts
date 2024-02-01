@@ -29,7 +29,7 @@ export class PostsController {
     }
 
     async findOne(req: Request, res: Response) {
-        throw new Error("Method not implemented.");
+        throw new CustomError("Method not implemented.", 501);
     }
 
     async delete(req: Request, res: Response) {}

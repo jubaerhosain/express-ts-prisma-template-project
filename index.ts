@@ -4,7 +4,7 @@
  * */
 import "express-async-errors";
 import express from "express";
-import { postRoutes } from "./src/posts/posts.routes";
+import { postRoutes } from "./src/api/posts/posts.routes";
 import { notFoundHandler } from "./src/middlewares/not-found.middleware";
 import { globalErrorHandler } from "./src/middlewares/global-error-handler.middleware";
 

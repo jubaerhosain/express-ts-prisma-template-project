@@ -2,7 +2,7 @@ import { CreatePostDto } from "./dto/create-post.dto";
 import PostQueryDto from "./dto/post-query.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";
 import { PostsService } from "./posts.service";
-import { Request, Response } from "express";
+import { Request, Response, query } from "express";
 
 export class PostsController {
     constructor(private readonly postsService: PostsService) {}
@@ -21,7 +21,9 @@ export class PostsController {
     }
 
     async findAll(req: Request, res: Response) {
-        throw new Error("not implemented");
+        const query = req.query;
+        const posts = await this.postsService.findAll(query);
+        res.status(200).json(posts);
     }
 
     async findOne(req: Request, res: Response) {

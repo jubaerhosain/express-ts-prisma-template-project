@@ -6,7 +6,6 @@ import { validateDto } from "../middlewares/dto-validation.middleware";
 import { CreatePostDto } from "./dto/create-post.dto";
 
 import { prismaClient } from "../prisma/prisma.client";
-import { defaultErrorHandler } from "../middlewares/global-error-handler.middleware";
 
 const postsController = new PostsController(new PostsService(new PostsRepository(prismaClient)));
 

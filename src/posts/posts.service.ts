@@ -24,7 +24,8 @@ export class PostsService {
         return updatedPost;
     }
 
-    findAll(query: PostQueryDto) {
-        throw new Error("Method not implemented.");
+    async findAll(query: PostQueryDto): Promise<Post[]> {
+        const posts = await this.postsRepository.findAll(query);
+        return posts;
     }
 }

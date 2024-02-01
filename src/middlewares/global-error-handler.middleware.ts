@@ -6,7 +6,7 @@ export const globalErrorHandler = (err: unknown, req: Request, res: Response, ne
             message: "Internal Server Error",
         });
     } else {
-        console.log("global");
-        next();
+        console.log("global" + err);
+        res.status(200).send("error");
     }
 };

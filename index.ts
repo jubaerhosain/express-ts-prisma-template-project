@@ -1,5 +1,9 @@
+/**
+ * Declare on top
+ * Automatically handles async errors and send errors to the global error handler calling next(error)
+ * */
+import "express-async-errors";
 import express from "express";
-import "express-async-errors"; // automatically handles async error and send to the global error handler
 import { postRoutes } from "./src/posts/posts.routes";
 import { notFoundHandler } from "./src/middlewares/not-found.middleware";
 import { globalErrorHandler } from "./src/middlewares/global-error-handler.middleware";

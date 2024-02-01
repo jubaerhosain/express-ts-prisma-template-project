@@ -5,7 +5,7 @@ export class PostsController {
     constructor(private readonly postsService: PostsService) {}
 
     async create(req: Request, res: Response) {
-
+        res.status(200).send("created");
     }
 
     async update(req: Request, res: Response) {}

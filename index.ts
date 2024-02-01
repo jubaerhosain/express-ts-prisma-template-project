@@ -1,11 +1,17 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import { postRoutes } from "./src/posts/posts.routes";
+import { notFoundHandler } from "./src/middlewares/not-found.middleware";
+import { defaultErrorHandler } from "./src/middlewares/error-handler.middleware";
 
 const app = express();
 
-// Example route using Prisma Client
-app.get("/posts", async (req: Request, res: Response) => {
-    
-});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use("/api", postRoutes);
+
+app.use(notFoundHandler);
+app.use(defaultErrorHandler);
 
 app.listen(3000, () => {
     console.log("Server listening on port 3000");

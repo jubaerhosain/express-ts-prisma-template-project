@@ -2,7 +2,7 @@ import { Post } from "@prisma/client";
 import { CreatePostDto } from "./dto/create-post.dto";
 import { PostsRepository } from "./posts.repository";
 import { UpdatePostDto } from "./dto/update-post.dto";
-import PostQueryDto from "./dto/post-query.dto";
+import { PostQueryDto } from "./dto/post-query.dto";
 
 export class PostsService {
     constructor(private readonly postsRepository: PostsRepository) {}

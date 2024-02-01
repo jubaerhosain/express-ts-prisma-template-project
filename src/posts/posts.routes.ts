@@ -6,13 +6,15 @@ import { validateDto } from "../middlewares/dto-validation.middleware";
 import { CreatePostDto } from "./dto/create-post.dto";
 
 import { prismaClient } from "../prisma/prisma.client";
+import { UpdatePostDto } from "./dto/update-post.dto";
+import { PostQueryDto } from "./dto/post-query.dto";
 
 const postsController = new PostsController(new PostsService(new PostsRepository(prismaClient)));
 
 export const postRoutes = Router();
 
-postRoutes.post("/posts", validateDto(CreatePostDto), postsController.create.bind(postsController));
-postRoutes.put("/posts/:id", postsController.update.bind(postsController));
-postRoutes.get("/posts/", postsController.findAll.bind(postsController));
+postRoutes.post("/posts", validateDto(CreatePostDto, "body"), postsController.create.bind(postsController));
+postRoutes.put("/posts/:id", validateDto(UpdatePostDto, "body"), postsController.update.bind(postsController));
+postRoutes.get("/posts/", validateDto(PostQueryDto, "query"), postsController.findAll.bind(postsController));
 postRoutes.get("/posts/:id", postsController.findOne.bind(postsController));
 postRoutes.delete("/posts", postsController.delete.bind(postsController));

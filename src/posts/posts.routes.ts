@@ -2,13 +2,14 @@ import { Router } from "express";
 import { PostsController } from "../posts/posts.controller";
 import { PostsRepository } from "../posts/posts.repository";
 import { PostsService } from "../posts/posts.service";
-import { PrismaClient } from "@prisma/client";
 import { validateDto } from "../middlewares/dto-validation.middleware";
 import { CreatePostDto } from "./dto/create-post.dto";
 
-const postsController = new PostsController(new PostsService(new PostsRepository(new PrismaClient())));
+import { prismaClient } from "../prisma/prisma.client";
 
-export const postRoutes = Router();
+const postsController = new PostsController(new PostsService(new PostsRepository(prismaClient)));
+
+export const postRoutes = Router(); 
 
 postRoutes.post("/posts", validateDto(CreatePostDto), postsController.create.bind(postsController));
 postRoutes.put("/posts/:id", postsController.update.bind(postsController));

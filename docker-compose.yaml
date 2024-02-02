@@ -1,23 +1,23 @@
 version: "3"
 
 services:
-    app-server:
+    express-app-server:
         build: .
         ports:
             - "3000:3000"
         environment:
-            - DATABASE_URL=mysql://root:samurai@db-server:3306/code_samurai_2024?schema=public
+            - DATABASE_URL=mysql://root:samurai@mysql-db-server:3306/code_samurai_2024?schema=public
             - PORT=3000
         depends_on:
-            - db-server
+            - mysql-db-server
 
-    db-server:
+    mysql-db-server:
         image: mysql:latest
         environment:
             MYSQL_ROOT_PASSWORD: samurai
             MYSQL_DATABASE: code_samurai_2024
-        volumes:
-            - db-store:/var/lib/mysql
+        # volumes:
+        #     - db-store:/var/lib/mysql
 
 volumes:
     db-store:

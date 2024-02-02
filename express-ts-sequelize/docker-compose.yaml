@@ -13,6 +13,7 @@ services:
 
     mysql-db-server:
         image: mysql:latest
+        restart: always
         environment:
             MYSQL_ROOT_PASSWORD: samurai
             MYSQL_DATABASE: code_samurai_2024

@@ -11,7 +11,6 @@ export class PostsController {
     async create(req: Request, res: Response) {
         const postDto: CreatePostDto = req.body;
         const post = await this.postsService.create(postDto);
-        throw new CustomError("Invalid Data", 400);
         res.status(201).json(post);
     }
 

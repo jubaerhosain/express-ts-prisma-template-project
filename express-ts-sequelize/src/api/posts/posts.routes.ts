@@ -6,9 +6,9 @@ import { validateDto } from "../../middlewares/dto-validation.middleware";
 import { CreatePostDto } from "./dto/create-post.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";
 import { PostQueryDto } from "./dto/post-query.dto";
+import { sequelize } from "../../sequelize/sequelize";
 
-import { prismaClient } from "../../prisma/prisma.client";
-const postsController = new PostsController(new PostsService(new PostsRepository(prismaClient)));
+const postsController = new PostsController(new PostsService(new PostsRepository(sequelize)));
 
 export const postRoutes = Router();
 

@@ -4,9 +4,13 @@
  * */
 import "express-async-errors";
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 import { postRoutes } from "./src/api/posts/posts.routes";
 import { notFoundHandler } from "./src/middlewares/not-found.middleware";
 import { globalErrorHandler } from "./src/middlewares/global-error-handler.middleware";
+
+import { config } from "./src/config/config";
 
 const app = express();
 
@@ -19,6 +23,6 @@ app.use(notFoundHandler);
 
 app.use(globalErrorHandler);
 
-app.listen(process.env.PORT, () => {
+app.listen(config.port, () => {
     console.log("Server listening on port 3000...");
 });

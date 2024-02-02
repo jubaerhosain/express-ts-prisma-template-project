@@ -13,9 +13,6 @@ RUN npm install
 # Copy remaining project files
 COPY . .
 
-# Generate Prisma client
-RUN npx prisma generate
-
 # Build TypeScript files
 RUN npm run build
 
@@ -23,4 +20,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Start the app
-CMD ["npm", "run", "start:migrate:prod"]
+CMD ["npm", "run", "start:prod"]

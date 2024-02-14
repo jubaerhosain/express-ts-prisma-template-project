@@ -1,10 +1,8 @@
-export class CustomError extends Error {
-    status: number;
-    data?: object;
-    constructor(message: string, status: number, data?: object) {
-        super(message);
+export class HttpError extends Error {
+    constructor(message: string | object, statusCode?: number) {
+        super("An error occured");
         this.name = this.constructor.name;
-        this.status = status;
-        this.data = data;
+        this.message = message;
+        this.statusCode = statusCode ? statusCode : 400;
     }
 }

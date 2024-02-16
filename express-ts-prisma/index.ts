@@ -1,7 +1,3 @@
-/**
- * Declare on top
- * Automatically handles async errors and send errors to the global error handler calling next(error)
- * */
 import "express-async-errors";
 import express from "express";
 import { postRoutes } from "./src/api/posts/posts.routes";

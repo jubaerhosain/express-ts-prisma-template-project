@@ -1,0 +1,34 @@
+services:
+  bysc-api:
+    container_name: qb-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:${PORT}
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    networks:
+      - qb-network
+    depends_on:
+      - qb-db
+
+  qb-db:
+    image: mongo:latest
+    restart: unless-stopped
+    ports:
+      - "27019:27017"
+    volumes:
+      - qb-db-data:/data/db
+    networks:
+      - qb-network
+
+networks:
+  qb-network:
+    driver: bridge
+
+volumes:
+  qb-db-data:

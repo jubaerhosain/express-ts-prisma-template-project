@@ -8,6 +8,7 @@ export class PostsService {
 
     async create(postDto: CreatePostDto) {
         const post = await this.postsRepository.create(postDto);
+
         return post;
     }
 

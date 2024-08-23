@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Selectors</title>
+
+    <style>
+        /* access all nested child inside div */
+        /* div p {
+            color: aqua;
+        } */
+
+        /* div li p {
+            color: red;
+        } */
+
+        /* direct child of div is p */
+        /* div > p {
+            color: red;
+        } */
+
+        /* select a p which previous sibling is div */
+        /* or p is the next sibling of div */
+        div + p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <ul>
+                <li> <p>THIS LI</p> </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p>This is paragraph1</p>
+        </div>
+        <p>This is paragraph2</p>
+        <p>This is paragraph2</p>
+    </div>
+</body>
+</html>

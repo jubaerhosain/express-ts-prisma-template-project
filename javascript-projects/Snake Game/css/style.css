@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+.container {
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 40vw;
+    height: 40vw;
+    background: linear-gradient(white, grey);
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+}
+
+.head {
+    background-color: red;
+}
+
+.body {
+    background-color: purple;
+}
+
+.food {
+    background-color: green;
+}

@@ -1,0 +1,2 @@
+This project developed for learning purpose and completely functioned.
+[ie: not responsive, and others functionalities]

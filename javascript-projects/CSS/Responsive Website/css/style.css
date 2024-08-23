@@ -1,0 +1,286 @@
+/* css reset  */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* css variables */
+:root {
+    --navbar-height: 50px;
+}
+
+/* navigation bar  */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+/* navigation bar: background before  */
+#navbar::before {
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+}
+
+/* navigation bar: logo  */
+#logo {
+    margin-left: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* navigation bar: navigations */
+#navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0 3vw;
+}
+
+#navbar ul li > a {
+    display: block;
+    border-radius: 5px;
+    padding: 2px 2px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+#navbar ul li > a:hover {
+    text-decoration: underline;
+    color: black;
+    background-color: rgb(121, 117, 117);
+}
+
+/* home section  */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+#home::before {
+    content: "";
+    background: url(../images/background.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 310px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#home h1 {
+    color: black;
+    /* opacity: 0.5; */
+}
+
+#home p {
+    color: black;
+    font-size: 1.1rem;
+    margin: 10px 0px;
+}
+
+#home .btn {
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    /* border: gray solid 1px; */
+    cursor: pointer;
+}
+
+/* services section  */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(202, 211, 212);
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+}
+
+.services .box {
+    border: rgb(133, 187, 169) solid 2px;
+    padding: 15px;
+    margin: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(224, 217, 217);
+    overflow: visible;
+    width: 32%;
+}
+
+.services .box img {
+    width: 60%;
+    height: 8rem;
+    display: block;
+    margin: auto;
+}
+
+
+/* client section  */
+#client-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 217, 217);
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+    /* border: green solid 2px; */
+}
+
+#clients .client-item img {
+    border-radius: 10px;
+    /* width height doesn't work without display blokc; */
+    display: block;
+    width: 100px;
+    height: 8rem;
+}
+
+/* contact section  */
+#contact-container {
+    background-color: rgb(202, 211, 212);
+    padding-bottom: 10px;
+}
+
+#contact-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#contact-box form {
+    padding: 5px;
+    width: 40%;
+    border: grey solid 2px;
+    border-radius: 10px;
+}
+
+#contact-box input, label{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 5px;
+}
+
+#contact-box #form-btn {
+    padding: 5px;
+    margin: 5px 0px;
+    border-radius: 5px;
+    /* makes item horizontally center  */
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* footer  */
+footer {
+    color: white;
+    background-color: black;
+}
+
+/* utility classes  */
+.h-primary {
+    font-size: 1.6rem;
+}
+
+.h-secondary {
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    #logo {
+        margin-left: 3vw;
+    }
+
+    .services {
+        flex-wrap: wrap;
+        /* background-color: rebeccapurple; */
+    }
+    
+    .services #box1 {
+        width: 100%;
+    }
+    
+    .services #box2 {
+        width: 100%;
+    }
+
+    .services #box3 {
+        width: 100%;
+    }
+
+    .services #box1 img {
+        width: 50%;
+    }
+    .services #box2 img {
+        width: 50%;
+    }
+    .services #box3 img {
+        width: 50%;
+    }
+
+    #navbar ul li a {
+        font-size: 0.8rem;
+    }
+
+    #contact-box form {
+        width: 95%;
+    }
+}

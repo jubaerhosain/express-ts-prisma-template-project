@@ -1,0 +1,8 @@
+1) selectors in css.
+2) fonts in css.
+3) colors in css.
+4) border and background.
+5) box model -> margin and padding.
+6) float and clear.
+7) display proparty.
+8) css position proparty.

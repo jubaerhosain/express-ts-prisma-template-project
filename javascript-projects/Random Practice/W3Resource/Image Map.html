@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+	    <title> Image Map </title>
+	</head>
+	
+	<body>
+	    <img src="workplace.jpg" alt="workplace" usemap="#workplace">
+		<map name="workplace">
+		    <area shape="rect" coords="34,44,270,350" alt="Computer" href="Link.html">
+			<area shape="rect" coords="290,172,333,250" alt="Phone" href="Link.html">
+			<area shape="circle" coords="337,300,44" alt="Cup of Coffee" onclick="myFunction()">
+		</map>
+		
+		<script>
+		    function myFunction(){
+			    alert("You have clicked on the cup!");
+			}
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,125 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    /* parcent dosent work for position relative */
+    /* height: 100%;
+    width: 100%; */
+    /* here viewpor height and width dosent adding scrllbar, so its fine  */
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+}
+
+#sky {
+    height: 50%;
+    width: 100%;
+    background: url(../images/bg2.jpg) no-repeat center center/cover;
+    /* background-size: 100%; */
+    position: absolute;
+}
+
+#track {
+    border: wheat solid 2px;
+    height: 26%;
+    width: 100000vw;
+    top: 50%;
+    position: absolute;
+    background-image: url(../images/track.jpg);
+    background-position: center center;
+    background-repeat: repeat-x;
+    /* background-size: cover; */
+
+    /* to make car on the track  */
+    z-index: 50;
+
+    animation: track-move linear 1.5s infinite;
+}
+
+.container #car {
+    /* border: rebeccapurple solid 2px; */
+    width: 200px;
+    height: 30%;
+    left: 20vw;
+    top: 47%;
+    background: url(../images/car1_adobespark.png) no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    /* to make car on the track  */
+    z-index: 100;
+    animation: car-move linear 0.5s infinite;
+}
+
+#wheel-1 {
+    width: 42px;
+    height: 42px;
+    background: url(../images/wheel11.png) no-repeat center center/cover;
+    border-radius: 50%;
+    position: absolute;
+    left: 71%;
+    top: 49%;
+    animation: wheel-move linear 0.5s infinite;
+}
+
+#wheel-2 {
+    width: 42px;
+    height: 42px;
+    background: url(../images/wheel12.png) no-repeat center center/cover;
+    border-radius: 50%;
+    position: absolute;
+    left: 9%;
+    top: 49%;
+    animation: wheel-move linear 0.5s infinite;
+}
+
+
+#bottom-bg {
+    height: 24%;
+    width: 100vw;
+    top: 76%;
+    position: absolute;
+    background: url(../images/bottom-bg.jpg) no-repeat center center/cover;
+}
+
+/* move track negatively  */
+@keyframes track-move {
+    0% {
+        transform: translateX(-170px);
+    }
+    100% {
+        transform: translateX(-1000px);
+    }
+}
+
+/* move car up-down  */
+@keyframes car-move {
+    0% {
+        transform: translateY(-2px);
+    }
+    25% {
+        transform: translateY(+2px);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+    75% {
+        transform: translateY(+2px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes wheel-move {
+    100% {
+        transform: rotate(360deg);
+    }
+}

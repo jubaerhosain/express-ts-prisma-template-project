@@ -1,0 +1,29 @@
+version: '3'
+services:
+    ebook-service:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - '3000:3000'
+        depends_on:
+            - ebook-mysql-db
+        environment:
+            - DATABASE_URL=mysql://root:iit123@ebook-mysql-db:3306/ebook?schema=public
+            - PORT=3000
+
+    ebook-mysql-db:
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: iit123
+            MYSQL_DATABASE: ebook
+        volumes:
+            - ebook-mysql-data:/var/lib/mysql
+
+volumes:
+    ebook-mysql-data:
+
+# docker-compose build
+# docker-compose run ebook-service  npx prisma migrate dev --name init --preview-feature
+# docker-compose up

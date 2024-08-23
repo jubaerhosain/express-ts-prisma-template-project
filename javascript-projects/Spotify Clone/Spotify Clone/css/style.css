@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Oswald:wght@200&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 300px;
+    min-height: 300px;
+}
+
+body {
+    background-color: gray;
+    /* min-width: 400px; */
+}
+
+nav {
+    font-family: 'Mochiy Pop P One', sans-serif;   
+    background-color: cornsilk;
+ 
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-left: 20px;
+}
+
+nav ul li {
+    margin: 0px 15px;
+}
+
+nav ul li:nth-child(2), li:nth-child(3) {
+    padding: 10px 0px;
+}
+
+nav ul li:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+
+nav #brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav #brand span {
+    font-size: 10px;
+}
+
+nav ul img {
+    width: 40px;
+    height: 40px;
+    /* border: black dotted 1px; */
+    border-radius: 50%;
+}
+
+.container {
+    min-height: 70vh;
+    max-height: 71vh;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    background-color: black;
+    color: white;
+    border: rgb(250, 180, 180) solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    /* background: url('../images/background-gif2.gif') no-repeat center center/cover; */
+}
+
+#song-container {
+    background: url('../images/background1.jpg') no-repeat center center/cover;
+}
+
+#song-list {
+    width: 21rem;
+    padding: 2px;
+    /* overflow-y: scroll; */
+    /* scrollbar-width: 5px;  width of the entire scrollbar */
+      
+    border: red solid 2px;
+}
+
+/* #song-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#song-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+#song-list::-webkit-scrollbar-thumb {
+    background-color: rgb(75, 74, 69);
+    outline: 1px solid slategrey;
+} */
+
+
+#song-list .song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(75, 74, 69);
+    border-radius: 5px;
+    margin: 2.5px 0;
+    padding: 0px 5px;
+    /* cursor: pointer; */
+}
+
+#song-list .song-item .song-images {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 2.5px 0px;
+    border-radius: 50%;
+}
+
+.time-stamp i {
+    cursor: pointer;
+}
+
+.bottom {
+    height: 10vh;
+    background-color: cornsilk;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#progress-bar {
+    width: 70%;
+    cursor: pointer;
+}
+
+#icons {
+    margin: 5px 0px;
+}
+
+#icons i {
+    cursor: pointer;
+}
+
+#song-info {
+    width: 70%;
+}
+
+#song-info img {
+    height: 18px;
+    width: 100%;
+    
+}

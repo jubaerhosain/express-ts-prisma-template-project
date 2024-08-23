@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.imgBox {
+    background-image: url('image.png');
+    border: blueviolet solid 1px;
+    height: 190px;
+    width: 190px;
+    position: relative;
+    margin: 3px 3px;
+    cursor: pointer;
+}
+
+.hold {
+    border: solid red 4px;
+}
+
+.hide {
+    display: none;
+}
+
+.dragenter {
+    background: violet;
+    border: brown dashed 2px;
+}
+
+.whiteBox {
+    display: inline-block;
+    border: brown solid 2px;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: 10px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 500px;
+            width: 100%;
+            border: red solid 2px;
+
+            /* making flex */
+            display: flex;
+
+            /* flex proparties for flex container */
+            /* by-default row */
+            flex-direction: row; 
+            /* flex-direction: row-reverse;  */
+            /* flex-direction: column;  */
+            /* flex-direction: column-reverse;  */
+
+            /* by-default nowrap */
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            /* flex-flow: direction, wrap; */
+            /* flex-flow: row-reverse, wrap; */
+
+            /* make elements center horizontally */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            justify-content: space-around;
+
+            /* makes element center vertically */
+            /* flex-start by-default */
+            /* align-items: center; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+
+            /* vertically even space */
+            align-items: stretch;
+        }
+
+        .item {
+            background-color: aqua;
+            /* margin: 10px auto; */
+            margin: 10px 10px;
+            padding: 10px;
+            border: black solid 2px;
+            width: 100px;
+            height: 100px;
+        }
+
+        /* flex proparties for item */
+        #item-1 {
+            /* higher order showed after */
+            /* order: 30; */
+            /* flex-grow: 3; */
+        }
+
+        #item-2 {
+            /* order: 2; */
+            
+            /* takes extra horizontal space when available */
+            /* flex-grow: 2; */
+        }
+
+        #item-3 {
+            /* order: 10; */
+
+            /* changes the previously seted width/height
+            control width when direction row-gap
+            control heigth when direction column */
+            /* flex-basis: 200px; */
+
+            /* reduce width when small viewport */
+            /* works for nowrap */
+            /* flex-shrink: 3; */
+
+            /* flex: grow shrink basis (shorthand) */
+            /* shirnk works for nowrap */
+            flex: 2 2 200px;
+
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item-1">First</div>
+        <div class="item" id="item-2">Second</div>
+        <div class="item" id="item-3">Third</div>
+        <!-- <div class="item" id="item-4">Fourth</div>
+        <div class="item" id="item-5">Fifth</div>
+        <div class="item" id="item-6">Sixth</div> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+I'll leave the choice upto you by quoting few points:
+
+Bootstrap 4:
+
+Stable. You can consume in full without any issues.
+Large community. In case if you face issues, you can resolve them easily.
+A liitle bit outdates on introduction to BS5.
+Bootstrap 5:
+
+Alpha phase. Basically testing phase.
+Lots of new and cool features
+Small community. If you face any issues, you will have to figure out the solutions on your own.
+Latest. Being up to date with current technologies is cool.
+So my take, in case if you want to build a heavy project please use BS4 and in case you want to fun-learn go for BS5 and wait for its complete release. 😊

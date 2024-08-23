@@ -1,0 +1,19 @@
+.services {
+    flex-wrap: wrap;
+}
+
+#box1 {
+    width: 40%;
+}
+
+#box2 {
+    width: 40%;
+}
+
+#box3 {
+    width: 100%;
+}
+
+#box3 img {
+    width: 25%;
+}

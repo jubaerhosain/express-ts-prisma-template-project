@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<head>
+		<title>HTML Form1</title>
+	</head>
+	
+	<body>
+		<form action = "#" method = "get" enctype="application/x-www-form-urlencoded" >
+			<table>
+				<tr>
+					<td class = "tdLabel"> <label for = "username" class = "label" style = "width: 160px"> Enter your name: </label> </td>
+					<td><input type = "text" name = "username" id = "username" style = "width: 160px" placeholder = "enter username"/></td>
+				</tr>
+				<tr>
+					<td class = "tdLabel"> <label for = "useremail" class = "label" style = "width: 160px"> Enter your email: </label> </td>
+					<td><input type = "email" name = "useremail" id = "useremail" style = "width: 160px" autofocus /></td>
+				</tr>
+				<tr>
+					<td class = "tdLabel"> <label for = "userpassword" class = "label" style = "width: 160px"> Enter your password: </label> </td>
+					<td><input type = "password" name = "userpassword" id = "userpassword" style = "width: 160px" required /></td>
+				</tr>
+				<tr>
+					<td class = "tdLabel"> <label for = "usergender" > Select your gender: </label> </td>
+					<td>
+						<input type = "radio" name = "gender" id = "usergender"/> <label for = "usergender">Male</label>
+						<input type = "radio" name = "gender" id = "usergender"/> <label for = "usergender">Female</label>
+					</td>
+				</tr>
+				<tr>
+					<td class = "tdLabel"> <label for = "usercountry"> Select your country: </label> </td>
+					<td> 
+						<select name = "country" id = "usercountry" style = "width: 160px">
+							<option value = "Bangladesh">Bangladesh</option>
+							<option value = "India">India</option>
+							<option value = "Pakistan">Pakistan</option>
+							<option value = "Iran">Iran</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan = "2" align = "right">
+						<input type = "submit" id = "register" value = "register"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

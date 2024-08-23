@@ -1,0 +1,2 @@
+font-family: 'Mochiy Pop P One', sans-serif;
+font-family: 'Oswald', sans-serif;

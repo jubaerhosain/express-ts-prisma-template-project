@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        
+/*         create a 4x4 grid 
+grid-template-rows: repeat(4, 1fr);
+grid-template-cols: repeat(4, 1fr);
+
+placed element to the 2nd row and 1st column
+gridrowstart = 2, gridcolstart = 1; */
+        
+        
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            
+            display: grid;
+            display: none;
+
+            /* width of each column  */
+            /* grid-template-columns: 250px 250px 250px; */
+            /* grid-template-columns: 250px auto 250px; */
+
+            /* every colum takes given fraction of width  */
+            /* fr = fraction */ 
+            /* grid-template-columns: 1fr 5fr 1fr; */
+
+            /* repeat n colums with equal width  */
+            grid-template-columns: repeat(4, auto);
+
+            grid-gap: 15px;
+        }
+
+        .item {
+            /* width: 200px; */
+            display: none;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 5px;
+        }
+
+
+        .grid {
+            display: grid;
+            grid-template-rows: 1fr 1fr 3fr;
+
+            /* extra divs takes 1fr */
+            grid-auto-rows: 1fr;
+
+            /* grid-template-columns: 2fr 2fr 2fr; */
+            grid-template-columns: repeat(5, 1fr);
+            display: none;
+        }
+
+        .box {
+            background-color: blueviolet;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            display: none;
+        }
+
+        .span {
+            display: grid;
+            /* grid-template-columns: 1fr 3fr 3fr; */
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            /* grid-row-gap: 5px;
+            grid-column-gap: 5px; */
+            grid-gap: 5px;
+            display: none;
+        }
+
+        .span-box {
+            background-color: aquamarine;
+            /* margin: 5px; */
+            padding: 20px;
+        }
+
+        .span-box:first-child {
+            /* grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 150;
+        }
+
+        .autofit {
+            display: grid;
+            grid-gap: 5px;
+            /* grid-template-columns: 200px 200px 200px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+
+            /* auto-fit mieans repeates while needed, or necessary */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            justify-content: center;
+            align-items: center;
+            /* height: 400px; */
+            display: none;
+        }
+
+        .autofit-box {
+            background-color: violet;
+            padding: 20px;
+        }
+
+        .layout {
+            display: grid;
+            display: none;
+            grid-gap: 5px;
+
+            /* have to give equal number of column in each row  */
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer'
+            ;
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .layout-box {
+            background-color: burlywood;
+            padding: 20px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Introduction -->
+    <div class="container">
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+    </div>
+
+    <!-- rows and gaps  -->
+    <div class="grid">
+        <div class="box">box-1</div>
+        <div class="box">box-2</div>
+        <div class="box">box-3</div>
+        <div class="box">box-4</div>
+        <div class="box">box-5</div>
+        <div class="box">box-6</div>
+        <div class="box">box-7</div>
+        <div class="box">box-8</div>
+        <div class="box">box-9</div>
+        <div class="box">box-10</div>
+    </div>
+
+    <!-- spanning multiple rows and colum  -->
+    <div class="span">
+        <div class="span-box">Item-1</div>
+        <div class="span-box">Item-2</div>
+        <div class="span-box">Item-3</div>
+        <div class="span-box">Item-4</div>
+        <div class="span-box">Item-5</div>
+        <div class="span-box">Item-6</div>
+        <div class="span-box">Item-7</div>
+        <div class="span-box">Item-8</div>
+    </div>
+
+    <!-- autofit and minmax, uses for responsiveness -->
+    <div class="autofit">
+        <div class="autofit-box">box-1</div>
+        <div class="autofit-box">box-2</div>
+        <div class="autofit-box">box-3</div>
+        <div class="autofit-box">box-4</div>
+        <div class="autofit-box">box-5</div>
+        <div class="autofit-box">box-6</div>
+        <div class="autofit-box">box-7</div>
+        <div class="autofit-box">box-8</div>
+    </div>
+
+    <!-- template area  -->
+    <div class="layout">
+        <div id="navbar" class="layout-box">
+            Home About Us Services Contact Us
+        </div>
+        <div id="section" class="layout-box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis maxime facere voluptatibus temporibus architecto aliquam voluptas laboriosam porro, ducimus quae.
+        </div>
+        <div id="aside" class="layout-box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, nostrum!
+        </div>
+        <!-- <div class="layout-box">Item-1</div>
+        <div class="layout-box">Item-2</div>
+        <div class="layout-box">Item-3</div>
+        <div class="layout-box">Item-4</div>
+        <div class="layout-box">Item-5</div>
+        <div class="layout-box">Item-6</div>
+        <div class="layout-box">Item-7</div>
+        <div class="layout-box">Item-8</div>
+        <div class="layout-box">Item-9</div>
+        <div class="layout-box">Item-10</div>
+        <div class="layout-box">Item-11</div>
+        <div class="layout-box">Item-12</div>
+        <div class="layout-box">Item-13</div>
+        <div class="layout-box">Item-14</div> -->
+
+        <footer class="layout-box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit dolore, repellat in omnis illo dolores cumque velit reprehenderit consequatur.
+        </footer>
+
+    </div>
+
+    <!-- layout with media query -->
+    
+</body>
+
+</html>

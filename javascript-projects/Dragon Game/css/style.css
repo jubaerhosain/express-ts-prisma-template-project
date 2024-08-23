@@ -1,0 +1,74 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --dragon-x: 100vw;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/bg.svg) no-repeat center center/cover;
+}
+
+#dinosor {
+    width: 13vw;
+    height: 12vh;
+    background: url(../images/dinosor_adobespark.png) no-repeat center center/cover;
+    position: absolute;
+    bottom: 20vh;
+    left: 15vw;
+    /* border: aqua solid 2px; */
+}
+
+.animate-dinosor {
+    animation: animate-dino 0.5s linear;
+}
+
+@keyframes animate-dino {
+    0% {
+        bottom: 20vh;
+    }
+    35% {
+        bottom: 41vh;
+        left: 16vw;
+    }
+    50% {
+        bottom: 41vh;
+        left: 17vw;
+    }
+    100% {
+        bottom: 20vh;
+        left: 18vw;
+    }
+}
+
+#dragon {
+    width: 13vw;
+    height: 12vh;
+    background: url(../images/dragon_adobespark.png) no-repeat center center/cover;
+    position: absolute;
+    bottom: 20vh;
+    left: 75vw;
+    /* border: aqua solid 2px; */
+}
+
+.animate-dragon {
+    animation: animate-dragon linear 2s infinite;
+}
+
+@keyframes animate-dragon {
+    0% {
+        left: var(--dragon-x);
+    }
+    100% {
+        left: -25vw;
+    }
+}

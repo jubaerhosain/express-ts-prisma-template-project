@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 920px)" href="css/phone.css">
+    <link rel="stylesheet" media="screen and (max-width: 770px)" href="css/mx-width-770.css">
+    <link rel="stylesheet" media="screen and (max-width: 650px)" href="css/mx-width-650.css">
+    <link rel="stylesheet" media="screen and (max-width: 525px)" href="css/mx-width-525.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="images/logo.jpg" alt="Resopnsive">
+        </div>
+
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#box1">Services</a></li>
+            <li class="item"><a href="#clients">About Us</a></li>
+            <li class="item"><a href="#contact-box">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary center">Welcome to Responsive</h1>
+        <p class="justify">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, cumque consequuntur deleniti possimus
+            similique pariatur ullam ad nihil unde debitis tenetur sed, vel voluptatum non a adipisci natus ducimus
+            voluptatibus illo ut facilis aspernatur. Minus expedita accusantium fuga iste a!
+        </p>
+        <button id="order-btn" class="btn">Order Now</button>
+    </section>
+
+    <section class="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div class="services">
+            <div id="box1" class="box">
+                <img src="images/services1.jpg" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil commodi praesentium iste veniam
+                    suscipit blanditiis laboriosam ratione provident alias a?
+                </p>
+            </div>
+            <div id="box2" class="box">
+                <img src="images/services2.jpg" alt="">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil commodi praesentium iste veniam
+                    suscipit blanditiis laboriosam ratione provident alias a?
+                </p>
+            </div>
+            <div id="box3" class="box">
+                <img src="images/services3.jpg" alt="">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil commodi praesentium iste veniam
+                    suscipit blanditiis laboriosam ratione provident alias a?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, repudiandae. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Alias distinctio dolore id corporis omnis dolorem eos ipsum.
+                    Excepturi soluta similique atque impedit quisquam nam assumenda voluptates, facere
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="images/client1.jpg" alt="Client1">
+            </div>
+            <div class="client-item">
+                <img src="images/client2.jpg" alt="Client1">
+            </div>
+            <div class="client-item">
+                <img src="images/client3.jpg" alt="Client1">
+            </div>
+            <div class="client-item">
+                <img src="images/client4.jpg" alt="Client1">
+            </div>
+            <div class="client-item">
+                <img src="images/client5.jpg" alt="Client1">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-container">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Etner Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone No</label>
+                    <input type="number" id="phone" name="pnone" placeholder="Ener Your Phone No">
+                </div>
+                <button id="form-btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright&copy; 'Responsive.com'. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

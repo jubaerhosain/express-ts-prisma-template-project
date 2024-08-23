@@ -1,0 +1,27 @@
+<!DOCTYPE html>    
+<html>  
+	<head>
+		<title>HTML JavaScript1</title>
+	</head>
+	<body>    
+		<h2>JavaScript can change html element</h2>     
+		<button type = "button" onclick = "myFunction()">Click me!</button>
+		<p id = "demo"></p>
+		<script>
+			function myFunction(){
+				document.getElementById("demo").innerHTML = "Hello JavaTpoint";
+			}
+		</script>
+		
+		<h2>JavaScript can change html style</h2>
+		<p id = "id1">This is paragraph that's style will be changed</p>
+		<script>
+			function function1(){
+				document.getElementById("id1").style.fontSize  = "25px";
+				document.getElementById("id1").style.color  = "red";
+				document.getElementById("id1").style.backgroundColor  = "lightgreen";
+			}
+		</script>
+		<button type = "button" onclick = "function1()">Click me1!</button>		
+	</body>    
+</html> 

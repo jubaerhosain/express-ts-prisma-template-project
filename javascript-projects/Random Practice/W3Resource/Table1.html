@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <title> Table </title>
+		
+		<style>
+		    table, th, td {
+			    border: 2px solid red;
+			}
+			table {
+			    border-spacing: 1px;
+			}
+			table#t1 {
+			    background-color: #f1f1c1;;
+			}
+		</style>
+	</head>
+	
+	<body>
+	    <h2> Basic HTML Table </h2>
+	
+	    <table style="width: 30%">
+		    <tr>
+			    <th> Name </th>
+			    <th colspan="2"> Telephone </th>
+			</tr>
+			<tr>
+			    <td> Jubaer Hosain </td>
+				<td> 01717407400 </td>
+				<td> 01643084669 </td>
+			</tr>
+		</table>
+		
+		<table style="width: 30%" id="t1">
+		    <caption> Phone Number </caption>
+		    <tr>
+			    <th> Name </th>
+			    <td> Jubaer Hosain </td>
+			</tr>
+			<tr>
+				<th rowspan="2"> Telephone </th>
+				<td> 01717407400 </td>
+			</tr>
+			<tr> 
+			    <td> 01643084669 </td>
+			</tr>
+		</table>
+	</body>
+</html>

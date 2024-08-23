@@ -1,0 +1,41 @@
+body {
+    box-sizing: border-box;
+    background-color: linear-gradient(rgb(134, 199, 204), rgba(192, 11, 216, 0));
+}
+
+#message-container {
+    width: 60%;
+    height: 60vh;
+    border: 1px solid black;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.message {
+    border: 1px solid blue;
+    padding: 5px;
+    margin: 5px 10px;
+    border-radius: 10px;
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+
+.right {
+    float: right;
+    clear: both;
+}
+
+#send {
+    width: 60%;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#input-message {
+    width: 70%;
+}

@@ -1,0 +1,48 @@
+transition and transform are separate CSS properties, but you can supply transform to transition to "animate" a transformation.
+transition
+The CSS transition property listens for changes to specified properties (background-color, width, height, etc.) over time.
+
+transition Property Syntax:
+
+selector {
+    transtion: [property-name] [duration] [timing-function] [delay]
+}
+For example, the below styles will change the color of a div's background to orange over a period of 1 second upon hover.
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  transition: background-color 1s;
+  /* timing function and delay not specified */
+}
+div:hover {
+  background-color: orange;
+}
+<div></div>
+
+transform
+The CSS transform property rotates/scales/skews an element over the X,Y, or Z axes. Its behavior does not relate to transition. Simply put, on page load, the element will just appear rotated/skewed/scaled.
+
+Now if you wanted the rotating/skewing/scaling to happen, say when a user hovered over the element, you would need to "transition" the "transformation".
+
+Here's how: since the transition property's functionality is to listen to changes in other css properties, you can actually supply transform as an argument to transition and "animate" the transformation based on desired trigger (for example, a hover action).
+
+transform Property Syntax
+
+select {
+    transform: [rotate] [skew] [scale] [translate] [perspective]
+}
+For example, the below styles will rotate a div over a period of 1 second upon hover.
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  transition: transform 1s;
+  /* timing function and delay not specified */
+}
+div:hover {
+  transform: rotate(30deg);
+}
+<div></div>

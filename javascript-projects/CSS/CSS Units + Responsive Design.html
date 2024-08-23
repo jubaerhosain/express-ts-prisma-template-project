@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+
+    <style>
+        html {
+            /* font-size: 20px; */
+        }
+
+        .container {
+            /* font-size: 15px; */
+            border: red solid 2px;
+            /* width: 400px; */
+            width: 100vw;
+            /* height: 400px; */
+            height: 100vh;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        #id-1 {
+            /* em */
+            /* 5 times bigger than its parent(.container) */
+            /* font-size: 5em; */
+
+            /* 2 times bigger than id-1's font size */
+            /* padding: 2em; */
+        }
+
+        #id-2 {
+            /* rem */
+            /* 5 times bigger than html font size */
+            /* font-size: 5rem; */
+
+            /* 2 times bigger than id-2's font size */
+            /* padding: 2rem; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 id="id-1">First</h3>
+        <h3 id="id-2">Second</h3>
+        <h3 id="id-3">Third</h3>
+        <h3 id="id-4">Fourth</h3>
+    </div>
+</body>
+
+</html>

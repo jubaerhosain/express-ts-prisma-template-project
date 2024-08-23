@@ -1,0 +1,2 @@
+width: 100vw; makes horizontal scrollbar .
+width: 100% should use.

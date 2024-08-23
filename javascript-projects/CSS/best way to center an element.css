@@ -1,0 +1,31 @@
+/* best way to center an element */
+    left: 50%;
+    transform: translateX(-50%);
+
+/* or  */
+margin: auto;
+
+/* Why??  */
+When working with hero images or full screen anything, I typically see text or images with the following bit of css:
+
+.item {
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+Can someone explain to me what this code is actually doing?
+
+/* answer... */
+The reason why transform: translate(-50%, -50%) is required is because you want the center of the element 
+to line up with the center of its parent. In simple terms, it can be boiled down to translateX(-50%) translateY(-50%), which means:
+
+move me leftwards by 50% of my width, along the x-axis, and
+move me upwards by 50% of my height, along the y-axis
+This effectively moves the center of the element to its original top left corner. Remember than when you set 
+left: 50%; top 50% on the element, you are moving its top left corner to the center of its parent 
+(which means it is not visually centered at all). By moving the element back leftwards and upwards by 
+half of its width and height respectively, you sure that its center now aligns with the 
+parent's center, making it visually horizontally + vertically centered.
+
+As a proof-of-concept, see the code snippet below: hover over the parent to cause the child element's 
+"ghost" to reposition itself by means of transform: translate(-50%, -50%):

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+	    <title> Classes </title>
+		
+		<style>
+		    .cities {
+			    background-color: #f1f1c1;
+				color: red;
+				margin: 5px;
+				padding: 20px;
+			}
+			.inline{
+			    font-size: 120%;
+				color: red;
+			}
+			.align{
+			    text-align: center;
+			}
+			.city{
+			    color: red;
+			}
+		</style>
+	</head>
+	
+	<body>
+	    <div class="cities align">
+		    <h2> London </h2>
+			<p> London is the capital of England </p>
+		</div>
+		
+		<div class="cities">
+		    <h2> Paris </h2>
+			<p> Paris is the capital of France </p>
+		</div>
+		
+		<div class="cities">
+		    <h2> Tokyo </h2>
+			<p> Tokyo is the capital of Japan </p>
+		</div>
+		
+		<h2> Inline Class </h2>
+		<p> This is some <span class="inline"> important </span> text </p>
+		
+		<button onclick="MyFunction()" > Click Here </button>
+		
+		<h2 class="city"> London </h2>
+        <p> London is the capital of England. </p>
+
+        <h2 class="city"> Paris </h2>
+        <p> Paris is the capital of France. </p>
+
+        <h2 class="city"> Tokyo </h2>
+        <p> Tokyo is the capital of Japan. </p>
+		
+		<script>
+		    function MyFunction(){
+			    var x = Classes.getElementByClassName("city");
+				for(var i = 0; i < x.length; i++){
+				    x[i].style.display = "none";
+				}
+			}
+		</script>
+	</body>
+</html>

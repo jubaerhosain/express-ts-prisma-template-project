@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and Nth Child</title>
+
+    <style>
+        /* the input which type is text, where type is an attribute */
+        /* input[type='text'] {
+            background-color: rosybrown;
+        }
+
+        a[target] {
+            background-color: rosybrown;
+        } */
+
+        /* select nth of ul child  */
+        /* ul :nth-child(3) {
+            color: gold;
+        } */
+
+        /* nth child of form  */
+        /* .form :nth-child(2) {
+            border: red solid 5px;
+        } */
+
+        /* why also selecting all decendent's 2nd also */
+        /* .container :nth-child(2) {
+            border: red solid 5px;
+        } */
+
+        /* li :nth-child(4) doesn't working
+        cannot space between tag and : */
+        /* li:nth-child(4) {
+            color: green;
+        } */
+
+        /* selects every 2nd element, n = 0,1,2,3........ */
+        /* li:nth-child(2n+0) {
+            color: green;
+        } */
+
+        li:nth-child(2n+1) {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3><a href="http://mono.com" target="_blank">A</a></h3>
+        <h3><a href="http://mono.com" target="_blank">B</a></h3>
+        <h3><a href="http://mono.com">C</a></h3>
+        <form action="noaction.php" class="form">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">First</li>
+            <li class="item" id="item-2">Second</li>
+            <li class="item" id="item-3">Third</li>
+            <li class="item" id="item-4">Fourth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+            <li class="item" id="item-5">Fifth</li>
+        </ul>
+    </div>
+</body>
+
+</html>

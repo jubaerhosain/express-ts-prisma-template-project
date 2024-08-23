@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <header> 
+        <title> HTML JavaScript </title>
+	</header>
+	
+    <body>
+	    <h1> My First JavaScript </h1>
+		
+		<button type="button" onclick="document.getElementById('time').innerHTML = Date()"> Click here to display Date and Time </button>
+		<p id="time"></p>
+		
+		<p id="hello"> </p>
+		<script>
+		    document.getElementById("hello").innerHTML = "Hello HTML";
+		</script>
+		
+		<p id="demo"> This is heading </p>
+		
+		<script>
+		    function MyFunction{
+			    document.getElementById("demo").style.fontSize = "25px"; 
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("demo").style.backgroundColor = "yellow"; 
+			}
+		</script>
+	    <button type="button" onclick="MyFunction()"> Click Here </button>
+    </body>
+</html> 

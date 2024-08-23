@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<head>
+		<title>HTML ID</title>
+		<style>
+			#car{
+				background-color: lightblue;
+				color: black;
+				padding: 40px;
+				text-align: center;
+			}
+			
+			#bike{
+				background-color: lightgreen;
+				color: red;
+				padding: 40px;
+				text-align: center;
+			}
+		</style>
+		
+		<script>   
+			function viewdate() {   
+			var x = document.getElementById("dob").value;   
+			document.getElementById("demo").innerHTML = x;   
+		</script>   
+	</head>
+	
+	<body>
+		<h2>use the id attribute in CSS document:</h2>
+		<p id = "car">Car</p>
+		<p id = "bike">Bike</p>
+		
+		<h2>use the ID attribute in JavaScript:</h2>
+		<label>Enter Username:</label>  <input type = "text" placeholder="Your Username"/> <br/>
+		<label>Date of joining:</label> <input type = "date" id = "dob"/> <br/>
+		<button onclick = "viewdate()">Submit</button> <br/>
+		<h2 id = "demo"></h2>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

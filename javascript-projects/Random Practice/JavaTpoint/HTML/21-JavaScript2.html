@@ -1,0 +1,25 @@
+<!DOCTYPE html>    
+<html>  
+	<head>
+		<title>HTML JavaScript2</title>
+	</head>
+	<body>    
+		<h2>JavaScript can change html attribute</h2>     
+		<button type = "button" onclick = "light(1)">Light on</button>
+		<button type = "button" onclick = "light(0)">Light off</button>
+		<img id = "myImg" src = "me.jpg" width = "500" height = "500">
+		<script>
+			function light(value){
+				var pic;
+				
+				if(value == 1){
+					pic = "me.jpg";
+				}
+				else{
+					pic = "friends.jpg";
+				}
+				document.getElementById("myImg").src = pic;
+			}
+		</script>		
+	</body>    
+</html> 

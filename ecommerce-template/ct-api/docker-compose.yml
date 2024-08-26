@@ -1,0 +1,34 @@
+services:
+  ct-api:
+    container_name: ct-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${PORT}:${PORT}
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    networks:
+      - ct-network
+    depends_on:
+      - ct-db
+
+  ct-db:
+    image: mongo:latest
+    restart: unless-stopped
+    ports:
+      - "27019:27017"
+    volumes:
+      - ct-db-data:/data/db
+    networks:
+      - ct-network
+
+networks:
+  ct-network:
+    driver: bridge
+
+volumes:
+  ct-db-data:
